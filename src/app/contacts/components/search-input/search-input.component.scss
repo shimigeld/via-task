@@ -1,6 +1,7 @@
 :host {
     float: right;
     min-width: 40%;
+    
     form {
         min-width: 150px;
         max-width: 500px;
@@ -9,6 +10,7 @@
             width: 100%;
         }
         ::ng-deep {
+
             .mat-form-field-flex {
                 background-color: white;
                 color: black;

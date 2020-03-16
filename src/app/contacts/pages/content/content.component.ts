@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
+import { ContactRecord } from '../../models/contact-record';
+
+import { Observable } from 'rxjs';
+
 import { Store } from '@ngrx/store';
 import { State } from '../../../reducers';
-import { Observable } from 'rxjs';
-import { ContactRecord } from '../../models/contact-record';
 import { selectContacts, SelectIsLoaderShowing } from '../../store/selectors/contacts.selectors';
 
 @Component({
@@ -13,6 +16,7 @@ import { selectContacts, SelectIsLoaderShowing } from '../../store/selectors/con
 export class ContentComponent implements OnInit {
   public contactList$: Observable<Array<ContactRecord>> = null;
   public showLoader$: Observable<boolean>;
+  
   constructor(private store: Store<State>) { }
 
   ngOnInit() {

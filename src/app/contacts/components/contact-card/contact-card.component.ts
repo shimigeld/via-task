@@ -8,8 +8,10 @@ import { ContactRecord } from '../../models/contact-record';
 })
 export class ContactCardComponent implements OnInit {
   @Input() public contact: ContactRecord;
+
   public isMouseHover = false;
   public iconSrc: string;
+  
   constructor() { }
 
   ngOnInit(): void {
