@@ -14,7 +14,6 @@ export const selectContacts = createSelector(
 export const SelectIsLoaderShowing = createSelector(
     selectContactsState,
     (state: ContactsState) => {
-        console.log(state.isLoaderShowing);
         return state.isLoaderShowing;
     }
   );
