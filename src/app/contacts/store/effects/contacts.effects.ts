@@ -5,7 +5,7 @@ import { exhaustMap, tap } from 'rxjs/operators';
 import { setContacts, showLoader, hideLoader } from '../actions/contacts.actions';
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/reducers';
-import { ContactService } from '../../services/contact.service';
+import { ContactsService } from '../../services/contacts.service';
 import { ContactRecord } from '../../models/contact-record';
 
 
@@ -14,7 +14,7 @@ export class ContactsEffects {
     constructor(
         private store: Store<State>,
         private actions$: Actions,
-        private contactService: ContactService
+        private contactService: ContactsService
       ) {}
 
 

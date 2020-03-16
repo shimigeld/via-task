@@ -7,7 +7,7 @@ import { every, tap, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactService {
+export class ContactsService {
   private url = 'http://private-05627-frontendnewhire.apiary-mock.com/contact_list';
 
   constructor(private httpClient: HttpClient) { }
@@ -24,7 +24,6 @@ export class ContactService {
           }
           return item;
         });
-        // console.log(newContacts);
         return newContacts;
       })
       ).toPromise();
