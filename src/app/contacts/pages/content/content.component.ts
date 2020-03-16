@@ -14,13 +14,13 @@ import { selectContacts, SelectIsLoaderShowing } from '../../store/selectors/con
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-  public contactList$: Observable<Array<ContactRecord>> = null;
+  public contactsList$: Observable<Array<ContactRecord>>;
   public showLoader$: Observable<boolean>;
-  
+
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
-    this.contactList$ = this.store.select(selectContacts);
+    this.contactsList$ = this.store.select(selectContacts);
     this.showLoader$ = this.store.select(SelectIsLoaderShowing);
   }
 

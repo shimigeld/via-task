@@ -1,6 +1,6 @@
 <div class="layout" fxLayout="row wrap" fxLayoutAlign="center center">
     <mat-spinner *ngIf="showLoader$ | async"></mat-spinner>
-    <div fxFlex="25" *ngFor="let contact of contactList$ | async">
+    <div fxFlex="25" *ngFor="let contact of contactsList$ | async">
         <contact-card [contact]="contact"></contact-card>
     </div>
 </div>
