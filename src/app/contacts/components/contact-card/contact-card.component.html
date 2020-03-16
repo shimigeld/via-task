@@ -1,0 +1,16 @@
+<mat-card (mouseover)="isMouseHover=true" (mouseleave)="isMouseHover=false">
+    <img mat-card-image [src]="contact.profile_image" alt="{{contact.name}} picture" [ngStyle]="{height: isMouseHover ? '80px' : '120px'}" >
+    <mat-card-subtitle>
+        {{contact.name}}
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div *ngIf="contact.driverRank">
+            Driver Rank: {{contact.driverRank}}
+        </div>
+        <div *ngIf="isMouseHover">
+            <div *ngIf="contact.phone">Phone: <a href="tel:{{contact.phone}}">{{propertyDisplay(contact.phone)}}</a></div>
+            <div *ngIf="contact.email">Email: <a href="mailto:{{contact.email}}">{{propertyDisplay(contact.email)}}</a></div>
+        </div>
+    </mat-card-content>
+    <svg-icon class="icon" [ngStyle]="{bottom: isMouseHover ? '80px' : '38px'}" src="{{iconSrc}}"></svg-icon>
+  </mat-card>
