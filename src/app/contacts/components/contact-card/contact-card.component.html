@@ -1,5 +1,5 @@
 <mat-card (mouseover)="isMouseHover=true" (mouseleave)="isMouseHover=false">
-    <img mat-card-image [src]="contact.profile_image" alt="{{contact.name}} picture" [ngStyle]="{height: isMouseHover ? '80px' : '120px'}" >
+    <img mat-card-image [src]="contact.profile_image" alt="{{contact.name}} picture" [ngStyle]="{height: isMouseHover ? '55px' : '120px'}" >
     <mat-card-subtitle>
         {{contact.name}}
     </mat-card-subtitle>
@@ -12,5 +12,5 @@
             <div *ngIf="contact.email">Email: <a href="mailto:{{contact.email}}">{{propertyDisplay(contact.email)}}</a></div>
         </div>
     </mat-card-content>
-    <svg-icon class="icon" [ngStyle]="{bottom: isMouseHover ? '80px' : '38px'}" src="{{iconSrc}}"></svg-icon>
+    <svg-icon class="icon" [ngStyle]="{bottom: isMouseHover ? '97px' : '35px'}" src="{{iconSrc}}"></svg-icon>
   </mat-card>

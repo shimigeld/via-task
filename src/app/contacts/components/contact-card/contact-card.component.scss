@@ -1,10 +1,15 @@
+
   mat-card{
     cursor: pointer;
     max-width: 120px;
-    height: 180px;
+    height: 145px;
 
     img {
       height: 120px;
+    }
+
+    mat-card-subtitle {
+      margin-bottom: 0;
     }
     
     mat-card-content {
@@ -14,7 +19,7 @@
 
     .icon {
       position: absolute;
-      bottom: 38px;
+      bottom: 5px;
       left: 8px;
     }
   }
